@@ -71,4 +71,4 @@ In 3–5 sentences, explain:
 - How validation walks the certificate chain
 - What would happen if the Root CA were not trusted
 
-The Root certificate is called the trust anchor because it is the main hub to validate all public and private keys for a certificate that it issues. It starts by first validating the identity of the certificate making sure its not expired and then comparing the private and public keys to the trust to make sure the request is valid. If the Root CA was not trusted the certificate would not be vaild. 
+The Root certificate is called the trust anchor because it is the main hub to validate all public and private keys for a certificate that it issues. It starts by first validating the identity of the certificate making sure its not expired and then comparing the private and public keys to the trust to make sure the request is valid. If the Root CA was not trusted the certificate would not be vaild and the website would not be secure. 
