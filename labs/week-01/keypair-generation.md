@@ -73,4 +73,5 @@ Why must the private key remain secret in a PKI system?
 The private keys must remain a secret because they are the needed link to decrypt data that was encrypted with both the public and private keys.
 
 Focus on how identity is tied to possession of the private key.
+
 Identity is tied to possesion of the private key because the private and public key are generated in pairs. Only the owner of the private key should know both keys. 
