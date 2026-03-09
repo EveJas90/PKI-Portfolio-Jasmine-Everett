@@ -31,6 +31,7 @@ The output on the left is the private key
 Briefly describe:
 - What makes the public key safe to share
 - What makes the private key sensitive
+
 The public key is issued to another party to decrypt the data that is encrytped by the private key. They private key is what is needed to decrypt data it also creates a digital signitare that confirms that something was done by an individual, thats why it is sensitive. 
  
 ---
@@ -42,6 +43,7 @@ Explain the risk in terms of:
   - Identity
   - Impersonation
   - Trust
+
 If a private key got into the wrong hands it could potentionally leak private data, someone can impersonate the individual that owns the privaate key, and or they would have to go through a more through security check to authenticate the identity moving forard.
 
 ---
