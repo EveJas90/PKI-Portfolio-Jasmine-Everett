@@ -17,7 +17,7 @@ reflections/week-XX.md
    When I'm browsing websites or trying to authenticate with certain websites at work and perform certain tasks.
    
 7. How would you explain this topic to a non-technical audience?
-   I would say think of PKI like having a passport and traveling to a different country. Your passport booklet acts as your certificate and the United States of America government is the "authority" that issued your book and it's trusted. You'll be able to enter that country because they can verify you are who you say you are. 
+   I would say think of PKI like having a passport and traveling to a different country. Your passport booklet acts as your certificate and the United States of America government is the "authority" that issued your book and it's trusted. You'll be able to enter that country because they can verify you are who you say you are. A passport has certain features that only the government can produce just like PKI uses two keys to keep things safe
    
 9. What questions remain?
     I have no questions at the moment. I think I'm just overthinking the current concepts and need more time to see how it all comes together with time and more examples. 
