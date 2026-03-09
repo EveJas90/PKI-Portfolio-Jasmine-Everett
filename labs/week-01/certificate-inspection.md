@@ -15,19 +15,20 @@ assets/screenshots/week-01/certificate-inspection.png
 ## Website Information
 
 **Website inspected:**  
-<!-- Enter full URL -->
+www.myhealth.va.gov
 
 **Issuer (Certificate Authority):**  
-<!-- Example: DigiCert, Let's Encrypt, GlobalSign -->
+DigiCert
 
 **Valid from:**  
-<!-- Start date -->
+Wednesday, January 28, 2026
 
 **Valid until:**  
-<!-- Expiration date -->
+Friday, February 5, 2027 at 6:59:59 PM
 
 **Signature algorithm:**  
 <!-- Example: sha256WithRSAEncryption -->
+SHA256WithRSAEncryption
 
 ---
 
@@ -35,9 +36,9 @@ assets/screenshots/week-01/certificate-inspection.png
 
 List at least 2–3 SAN entries:
 
-- 
-- 
-- 
+- www.myhealth.va.gov
+- myhealth.va.gov
+- sm.myhealth.va.gov
 
 ---
 
@@ -46,13 +47,13 @@ List at least 2–3 SAN entries:
 Document three observations about the certificate.
 
 ### Observation 1
-<!-- What did you notice? -->
+I noticed for this certificate it is issued by DigiCert. 
 
 ### Observation 2
-<!-- What did you notice? -->
+This certificate also has a longer valdation time frame than the pervious certificate in the first lab. This certificate is validated a year and 1 month versus the other certifcate that was only valid for 3 months.
 
 ### Observation 3
-<!-- What did you notice? -->
+I also noticed that the certificate validates multiple domain variations of the same website, such as www.myhealth.va.gov and myheath.va.gov. This would ensure that an user could still access the website securely if they omitted putting www before the web address.
 
 ---
 
@@ -61,3 +62,5 @@ Document three observations about the certificate.
 Based on your inspection, explain how this certificate contributes to secure HTTPS communication.
 
 (2–3 sentences)
+
+This certifcate helps support secure HTTPS communication by verifying the identity of the website and enabling encrypted connections between the user and the server. Because it is issued by DigiCert the browser can trust that the website is legitimate.The certificate's public key is used to confirm that the connection is secure with the private key. 
