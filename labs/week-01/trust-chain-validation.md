@@ -40,6 +40,7 @@ Is the Root CA marked as trusted by your system?
 Yes
 
 If yes, explain where that trust comes from (OS/browser root store).
+
 The trust comes from Google Trust Services
 
 If no, explain what warning or behavior occurred.
