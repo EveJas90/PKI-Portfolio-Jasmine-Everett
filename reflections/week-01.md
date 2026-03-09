@@ -28,5 +28,10 @@ reflections/week-XX.md
 ## Professional Growth Check
 
 - Did you document clearly?
+- I feel that I did my best to format my thoughts clearly
+  
 - Did you use structured formatting?
+  Yes
+  
 - Was your commit message meaningful?
+I'm not sure
