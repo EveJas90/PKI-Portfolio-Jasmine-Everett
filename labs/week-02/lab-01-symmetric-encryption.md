@@ -38,10 +38,12 @@ Describe what you actually did.
 Include the important outputs or findings from the lab.
 
 Viewing the file before decrypting
-![Verification results](assets/verification-results.png)
+
+![Verification results](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a57820ceceb11ca3c37d3eda40715afe41b51ea7/assets/screenshots/week-02/verification-results.png)
 
 Decrypting and viewing the decrypted file
-![Verification results](assets/verification-results2.png)
+
+![Verification results](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a57820ceceb11ca3c37d3eda40715afe41b51ea7/assets/screenshots/week-02/verification-results2.png)
 
 ---
 
@@ -79,8 +81,9 @@ List the files generated during this lab.
 
 Examples:
 
-plaintext.decrypted.txt  plaintext.txt  plaintext.txt.enc
-
+plaintext.decrypted.txt  
+plaintext.txt  
+plaintext.txt.enc
 
 ---
 
