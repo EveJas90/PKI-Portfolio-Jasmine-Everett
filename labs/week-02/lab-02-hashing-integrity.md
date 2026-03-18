@@ -24,25 +24,7 @@ Summarize the key steps you performed to complete the lab.
 2.  Used Open SSL to generate a SHA-256 hash of the file.
 3.  Modifed the hashed file with the word "tampered".
 4. Observed the findigs of the new hash and the old hash.
-5. Both hashes are diffrent which confirms that the process was sucessfull.   
-
----
-
-## Results
-Include the important outputs or findings from the lab.
-
-Examples may include:
-
-- command outputs
-- certificate fields
-- verification results
-- screenshots (if applicable)
-
-If you include screenshots, store them in the **assets folder** and reference them here.
-
-Example:
-
-![Certificate Output](assets/certificate-output.png)
+5. Both hashes are diffrent which confirms that the process was sucessfull.  
 
 ---
 
@@ -50,7 +32,9 @@ Example:
 Document the most important observations from the lab.
 
 •  Small changes to the original file would rest in a completly diffrent hash, demonstrating how hashing works to keep data integrity.
+
 •  The hashing output appeared as a long string of characters
+
 •  When generating a hash a new file will be created for comparision later.
 
 ---
@@ -59,9 +43,6 @@ Document the most important observations from the lab.
 Explain **why the results matter**.
 
 The results matter because they easily demonstrate how hashing can be used to detect of data has been altered. By generating a hash using SHA-256 with Open SSL, a small change, would produce a different hash vaule. This would allow a user to verify the integrity of the data to make sure it hasn't been tampered with.
-
----
-
 
 ---
 
