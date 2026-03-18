@@ -37,7 +37,7 @@ Describe what you actually did.
 
 ## Results
 
-![Certificate Output]([assets/screenshots/week-02/hashing-integrity.png](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/0ac7a5b25dedaa496b0f5450634ef2894610da0e/assets/screenshots/week-02/hashing-integrity.png)
+![Certificate Output](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/0ac7a5b25dedaa496b0f5450634ef2894610da0e/assets/screenshots/week-02/hashing-integrity.png)
 
 ---
 
