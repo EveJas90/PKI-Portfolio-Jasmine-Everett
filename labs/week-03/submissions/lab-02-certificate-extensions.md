@@ -4,6 +4,8 @@
 Briefly describe what this lab was about in your own words.
 What PKI concept were you investigating?
 
+This lab is about how to investigate a certifcate further by reading the Certificate Extentions to determine how it can be used and validated. The PKI concept that I'm investigating is certificate validation and trust enforcement.
+
 ---
 
 ## Environment
