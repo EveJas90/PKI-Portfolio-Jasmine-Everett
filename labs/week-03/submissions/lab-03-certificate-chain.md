@@ -4,18 +4,24 @@
 Briefly describe what this lab was about in your own words.
 What PKI concept were you investigating?
 
+This lab focuses on retrieving a digital certificate and validating it by examining its contents using OpenSSL. I inspected certificate fields such as subject and issuer, and verifed that the certificate chain was properly constructed by linking the lear certificate to an intermediate CA and then to a trusted root CA.
+
+The PKI concept that I am investigating is chain of trust verification.
+
 ---
 
 ## Environment
 - OS: Windows 11
 - Terminal used (Mac Terminal / Git Bash / WSL): Git Bash
-- OpenSSL version (`openssl version`): 
+- OpenSSL version (`openssl version`): OpenSSL 3.5.5 27 Jan 2026
 - Website used: github.com
 
 ---
 
 ## Chain Verification Result
 Paste the output of your `openssl verify` command:
+
+server.pem: OK
 
 ---
 
