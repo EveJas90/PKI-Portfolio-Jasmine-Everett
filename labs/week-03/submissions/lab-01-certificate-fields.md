@@ -4,7 +4,7 @@
 Briefly describe what this lab was about in your own words.
 What PKI concept were you investigating?
 
-This lab's purpose was to show how to read and interpet the key fields of a x.509 certificate.
+This lab's purpose was to show how to read and interpet the key fields of a X.509 certificate.
 
 ---
 
@@ -20,12 +20,12 @@ This lab's purpose was to show how to read and interpet the key fields of a x.50
 | Field                | Value from your output |
 |----------------------|------------------------|
 | Version              | 3 (0x2)                |
-| Serial Number        | 7f:e5:30:bf:33:13:43:be:dd:82:16:10:49:3d:8a:1b|
-| Signature Algorithm  | sha256WithRSAEncryption|
-| Issuer               | C=BE, O=GlobalSign nv-sa, OU=Root CA, CN=GlobalSign Root CA|
-| Subject              | C=US, O=Google Trust Services LLC, CN=GTS Root R4|
-| Not Before           | Nov 15 03:43:21 2023 GMT|
-| Not After            | Jan 28 00:00:42 2028 GMT|
+| Serial Number        | aa:23:02:42:8e:f4:39:7e:10:bb:2c:32:93:1c:fc:2e|
+| Signature Algorithm  | ecdsa-with-SHA256      |
+| Issuer               | C=US, O=Google Trust Services, CN=WE2|
+| Subject              | CN=*.google.com|
+| Not Before           | Feb 23 18:19:56 2026 GMT|
+| Not After            | May 18 18:19:55 2026 GMT|
 | Public Key Algorithm | id-ecPublicKey          |
 
 ---
@@ -33,16 +33,21 @@ This lab's purpose was to show how to read and interpet the key fields of a x.50
 ## Observations
 
 1. Who issued the certificate?
-   Global Sign
+   
+   Google Trust Services
   
 3. What domain or organization does it represent?
-   It represents Google Trust Services LLC
+   
+   It represents google.com
    
 5. When does it expire?
-   It expires Jan 28
+   
+   It expires May 18th
    
 7. What public key algorithm is used?
-   The public key algorithm used was sha256WithRSAEncryption
+   
+   The public key algorithm used was ecdsa-with-SHA256
    
 9. Why does the Issuer field matter in a PKI system?
+    
    The issuer field matters in PKI because it tells who the oganization is that issued the certificate. 
