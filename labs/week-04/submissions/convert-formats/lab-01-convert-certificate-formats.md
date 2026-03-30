@@ -4,6 +4,10 @@
 Briefly describe what this lab was about in your own words.
 What PKI concept or system behavior were you investigating?
 
+This lab was about working with different certificate formats and understanding how certificates and keys are packaged and converted using OpenSSL. I retrieved a certificate in PEM format, converted it to DER, then converted it back to PEM to confirm the integrity of the data. I also created a PFX bundle by generating a key pair and self-signed certificate, then packaging them together and verifying the result.
+
+The main PKI concept being investigated was certificate encoding and key management, specifically how certificates can be converted between formats (PEM, DER, PFX) while maintaining integrity, and how private keys and certificates are securely bundled for transport and use in real world systems.
+
 ---
 
 ## Environment
