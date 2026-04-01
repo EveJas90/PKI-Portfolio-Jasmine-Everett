@@ -36,20 +36,22 @@ Include the important outputs or findings from the lab.
   
   The PEM file was in a readable formated. It had a distingushed header and footer such as BEGIN and END. I could easily decifer the characters used whereas in the DER file the characters where in an unrecongnizable format.
 
+ ![PEM file example]( https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/1518a0c01b096d1c064c392e463a88f2874e75aa/assets/screenshots/week-04/Covert%20Cert%20PEM%20file%20example.png)
+
 - What happened when you opened the .der file in a text editor?
-  The file opened but I was unable to read what the characters said.
+  The file opened but the characters were in a unreadable format.
+
+   ![DER file example](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/1518a0c01b096d1c064c392e463a88f2874e75aa/assets/screenshots/week-04/Covert%20Cert%20DER%20file%20example.png)
   
 - What did the diff output show after converting PEM → DER → PEM?
 - My output was blank. Each time. To me that just verifed that it sucessfully converted and I was able to confirm this by looking at both files.
-- 
-- What information was displayed when you verified the PFX?
 
-"MAC: sha256, Iteration 2048
-MAC length: 32, salt length: 8
-PKCS7 Encrypted data: PBES2, PBKDF2, AES-256-CBC, Iteration 2048, PRF hmacWithSHA256
-Certificate bag
-PKCS7 Data
-Shrouded Keybag: PBES2, PBKDF2, AES-256-CBC, Iteration 2048, PRF hmacWithSHA256"
+![DIff output](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/bb78cd1119ce0db9e2728215c7e435fdd3d2133f/assets/screenshots/week-04/Diff%20Output.png)
+
+- What information was displayed when you verified the PFX?
+  The screenshot below is what was displayed when I verifed the PFX file:
+
+![PFX verification](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/bb78cd1119ce0db9e2728215c7e435fdd3d2133f/assets/screenshots/week-04/PFX%20BUndle%20Verification.png)
 
 
 ---
