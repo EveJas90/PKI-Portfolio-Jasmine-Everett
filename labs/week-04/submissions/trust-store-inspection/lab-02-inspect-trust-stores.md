@@ -42,11 +42,12 @@ Include the important outputs or findings from the lab.
 
 I looked at a Microsoft Root Authority certificate. Based on what I see in my screenshot it has the following information:
 
+Issuer:
 CN = Microsoft Root Authority
 OU = Microsoft Corporation
 OU = Copyright (c) 1997 Microsoft Corp.
 
-It was valid ‎Friday, ‎January ‎10, ‎1997 to ‎Thursday, ‎December ‎31.
+It was valid ‎‎Friday, ‎January ‎10, ‎1997 3:00:00 AM to ‎Thursday, ‎December ‎31, ‎2020 3:00:00 AM
 
 ![Cert Preview](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a9c6762f0485a887627d33065425e0351ed486a0/assets/screenshots/week-04/Cert%20Preview.png)
 
