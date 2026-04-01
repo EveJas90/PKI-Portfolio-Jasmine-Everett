@@ -34,7 +34,7 @@ Include the important outputs or findings from the lab.
 
 - How many trusted root CAs did you find on your system?
   
-  I found over 23 trusted root CAs on my machine.
+  I found 54 trusted root CAs on my machine.
 
   ![Trust Store](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a9c6762f0485a887627d33065425e0351ed486a0/assets/screenshots/week-04/Cert%20Store.png)
 
