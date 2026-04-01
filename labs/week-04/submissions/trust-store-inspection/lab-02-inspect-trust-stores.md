@@ -35,11 +35,25 @@ Include the important outputs or findings from the lab.
 - How many trusted root CAs did you find on your system?
   I found over 23 trusted root CAs on my machine.
 
+  ![Trust Store](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a9c6762f0485a887627d33065425e0351ed486a0/assets/screenshots/week-04/Cert%20Store.png)
+
 -  Name at least one specific root CA you inspected. Include its Subject and expiration date.
-  I looked at a Microsoft Root Authority certificate. CN = Microsoft Root Authority, OU = Microsoft Corporation, OU = Copyright (c) 1997 Microsoft Corp. It was valid ‎Friday, ‎January ‎10, ‎1997 to ‎Thursday, ‎December ‎31
+  I looked at a Microsoft Root Authority certificate. Based on what I see in my screenshot it has the following information:
+
+CN = Microsoft Root Authority
+OU = Microsoft Corporation
+OU = Copyright (c) 1997 Microsoft Corp.
+
+It was valid ‎Friday, ‎January ‎10, ‎1997 to ‎Thursday, ‎December ‎31.
+
+![Cert Preview](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a9c6762f0485a887627d33065425e0351ed486a0/assets/screenshots/week-04/Cert%20Preview.png)
 
 - What did the verify return code output tell you?
 Verify return code: 0 (ok) this means that the certificate validatio was sucessful and fully trusted.
+
+![Verify Return 1](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a9c6762f0485a887627d33065425e0351ed486a0/assets/screenshots/week-04/Return%20results-1.png)
+
+![Verify Reutrn 2](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/a9c6762f0485a887627d33065425e0351ed486a0/assets/screenshots/week-04/Return%20results-2.png)
 
 ## Key Findings
 Document the most important observations from the lab.
