@@ -88,7 +88,7 @@ openssl x509 -in leaf_cert.pem -text -noout
 | Issuer |C=US, O=Let's Encrypt, CN=R13|
 | Not Before |Mar 24 20:02:52 2026 GMT|
 | Not After |Jun 22 20:02:51 2026 GMT |
-| SAN entries |N/A |
+| SAN entries |*.badssl.com |
 
 **What you found:**
 
