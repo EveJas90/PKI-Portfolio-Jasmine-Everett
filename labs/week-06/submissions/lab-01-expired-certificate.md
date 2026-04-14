@@ -1,4 +1,4 @@
-# Lab [1] — [Expired Certificate]
+# Lab [01] — [Expired Certificate]
 
 **Week 6 · PKI Incident Diagnosis & Troubleshooting**
 **CVI PKI Career Pathway — Phase 1 Foundations**
