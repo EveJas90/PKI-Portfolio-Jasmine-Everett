@@ -15,44 +15,54 @@
 
 ### What failed
 
-[One sentence: what exactly caused the TLS failure]
+The TLS connection was tested against a misconfigured hostname simulating a DNS or certificate mismatch scenario.
 
 ---
 
 ### Evidence
 
-- [Key field or value from the certificate — e.g., Not After date, Issuer CN, SAN entries]
-- [Supporting command output or observation]
-- [Any additional evidence]
+**Command used:**
+
+```
+$ openssl s_client -connect wrong.host.badssl.com:443 -servername wrong.host.badssl.com </dev/null 2>&1
+
+```
+
+<img width="262" height="36" alt="San Mismatch Evidence" src="https://github.com/user-attachments/assets/1e2ab28d-dfb0-4b01-a1c9-2739d8a460f7" />
+<img width="220" height="30" alt="San Mismatch Evidence2" src="https://github.com/user-attachments/assets/474660a7-7418-4ae8-87c0-f090985ca322" />
+
+-Verify return code: 0 (ok)
+
+-Subject CN: *.badssl.com
+
+-Issuer: Let’s Encrypt R13
+
+-Certificate chain successfully validated without errors
+
 
 ---
 
 ### Why it failed
 
-[2–3 sentences: the technical explanation of the failure. Connect it to what you learned in the
-relevant Week 5 or Week 6 lesson. Don't just describe what happened — explain why it caused a
-TLS error.]
+The TLS handshake succeeded because the certificate chain was valid and trusted by the system’s root CA store. However, the hostname mismatch between the SNI value and the expected domain demonstrates that certificate validation and hostname verification are separate processes. In real browser environments, this mismatch would typically trigger a security warning even if the certificate chain itself is valid.
 
 ---
 
 ### Chain status
 
-[Was the certificate chain structurally intact? Were there any chain-related issues separate from
-the primary failure?]
+The certificate chain was structurally complete, consisting of the leaf certificate, intermediate CA (Let’s Encrypt R13), and root CA (ISRG Root X1). No chain-building or trust issues were detected, and verification returned “ok”.
 
 ---
 
 ### Remediation path
 
-[Step-by-step: what needs to happen to restore the failing system? Be specific. Walk through
-the process rather than summarizing it in one line.]
+The correct remediation would be to ensure that the certificate is issued for the exact hostname being used in DNS and SNI. If DNS records were updated, a new certificate request should be generated for the updated hostname. The updated certificate would then need to be deployed to the server or load balancer handling TLS termination.
 
 ---
 
 ### Prevention
 
-[One concrete thing the organization could do differently to prevent this failure type from
-recurring]
+Implement automated certificate management tied to DNS changes, ensuring that any hostname updates trigger certificate reissuance and deployment. Additionally, enforce hostname validation testing during TLS configuration validation.
 
 ---
 
@@ -65,12 +75,12 @@ Document each step of the PKI Diagnostic Framework as you worked through it.
 **Command used:**
 
 ```
-[paste command here]
+openssl s_client -connect wrong.host.badssl.com:443 -servername wrong.host.badssl.com
 ```
 
 **What you observed:**
 
-[What the output told you — connection errors, certificate retrieved, etc.]
+Successful TLS connection and certificate retrieval from the server.
 
 ---
 
@@ -79,22 +89,22 @@ Document each step of the PKI Diagnostic Framework as you worked through it.
 **Command used:**
 
 ```
-[paste command here]
+openssl x509 -in mismatch_cert.pem -text -noout
 ```
 
 **Key fields from the certificate:**
 
 | Field | Value |
 |---|---|
-| Subject CN | |
-| Issuer | |
-| Not Before | |
-| Not After | |
-| SAN entries | |
+| Subject CN | *.badssl.com |
+| Issuer | Let's Encrypt R13 |
+| Not Before |Mar 24 20:02:52 2026 GMT |
+| Not After |Jun 22 20:02:51 2026 GMT |
+| SAN entries |*.badssl.com|
 
 **What you found:**
 
-[What the parsed certificate told you about the failure]
+The certificate is valid for *.badssl.com, confirming it does not strictly match the mismatched hostname.
 
 ---
 
@@ -103,16 +113,16 @@ Document each step of the PKI Diagnostic Framework as you worked through it.
 **Command used:**
 
 ```
-[paste command here]
+openssl verify mismatch_cert.pem
 ```
 
 **Result:**
 
-[Chain valid / chain broken — and what the error said]
+Verify return code: 0 (ok)
 
 **What you found:**
 
-[What this step confirmed or ruled out]
+The certificate chain was valid and fully trusted, with no intermediate or root trust issues
 
 ---
 
@@ -126,14 +136,13 @@ Document each step of the PKI Diagnostic Framework as you worked through it.
 
 **What you found:**
 
-[OCSP URL present or absent, revocation status if checked, any trust store issues]
+No OCSP or CRL check was performed in this step. However, the certificate chain was successfully validated against trusted root authorities, indicating no immediate trust or revocation issues were detected during the handshake.
 
 ---
 
 ## Reflection
 
-[2–3 sentences: What did this lab reinforce or clarify for you? Was there a step where
-you had to slow down and think carefully?]
+This lab reinforced that TLS validation involves multiple independent checks, including certificate chain verification and hostname identity matching. One area that required careful interpretation was understanding why the certificate chain could validate successfully even when the requested hostname did not match exactly. It also highlighted how the connection request (SNI) influences which certificate is presented, and how that is separate from certificate validation itself.
 
 ---
 
