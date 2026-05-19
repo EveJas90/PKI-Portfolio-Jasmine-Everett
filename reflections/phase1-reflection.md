@@ -82,6 +82,8 @@ PKI is the technical backbone that makes this continuous, explicit verification 
 
 **Visual file:** reflections/visual/Phase 1 Project.png
 
+![Phase 1 Project](https://github.com/EveJas90/PKI-Portfolio-Jasmine-Everett/blob/5af3612144bc4e53425e4554adf2e897742c72f7/reflections/visual/Phase%201%20Project.png)
+
 *Brief description of what your diagram shows:*
 
 My diagram illustrates a three-tier PKI trust hierarchy, mapping out the chain of trust from a Root CA down to an Intermediate (Issuing) CA, and finally to an end-entity leaf certificate. It highlights how the Root CA sits at the top as the ultimate trust anchor (typically kept offline for security), which delegates signing authority to the Intermediate CA. The Intermediate CA then explicitly verifies and signs the individual leaf certificates used by servers or users. This layout perfectly reflects the "never trust, always verify" mindset, demonstrating that a system must validate every link in the chain upwards to the Root before granting explicit access.
