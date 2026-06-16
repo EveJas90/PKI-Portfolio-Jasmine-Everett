@@ -258,9 +258,9 @@ certutil -template CVI-WebServer
   Name: Active Directory Enrollment Policy
   Id: {41635678-B3E8-4BD7-8FE7-D49A1E336991}
   Url: ldap:
-34 Templates:
+35 Templates:
 
-  Template[8]:
+  Template[9]:
   TemplatePropCommonName = CVI-WebServer
   TemplatePropFriendlyName = CVI-WebServer
   TemplatePropEKUs =
@@ -274,11 +274,11 @@ certutil -template CVI-WebServer
   TemplatePropMajorRevision = 64 (100)
   TemplatePropDescription = Computer
   TemplatePropSchemaVersion = 2
-  TemplatePropMinorRevision = 3
+  TemplatePropMinorRevision = 6
   TemplatePropRASignatureCount = 0
   TemplatePropMinimumKeySize = 800 (2048)
   TemplatePropOID =
-    1.3.6.1.4.1.311.21.8.15886664.4298044.8996776.14853544.7902291.169.8802149.7201620
+    1.3.6.1.4.1.311.21.8.15886664.4298044.8996776.14853544.7902291.169.8802149.7201620 CVI-WebServer
 
   TemplatePropV1ApplicationPolicy =
 1 ObjectIds:
@@ -289,10 +289,10 @@ certutil -template CVI-WebServer
   TemplatePropSubjectNameFlags = 1
     CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
 
-  TemplatePropPrivateKeyFlags = 3050000 (50659328)
+  TemplatePropPrivateKeyFlags = 4060000 (67502080)
     CTPRIVATEKEY_FLAG_ATTEST_NONE -- 0
-    TEMPLATE_SERVER_VER_WINBLUE<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 50000 (327680)
-    TEMPLATE_CLIENT_VER_WIN7<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 3000000 (50331648)
+    TEMPLATE_SERVER_VER_THRESHOLD<<CTPRIVATEKEY_FLAG_SERVERVERSION_SHIFT -- 60000 (393216)
+    TEMPLATE_CLIENT_VER_WIN8<<CTPRIVATEKEY_FLAG_CLIENTVERSION_SHIFT -- 4000000 (67108864)
 
   TemplatePropGeneralFlags = 20241 (131649)
     CT_FLAG_ENROLLEE_SUPPLIES_SUBJECT -- 1
@@ -300,10 +300,12 @@ certutil -template CVI-WebServer
     CT_FLAG_ADD_TEMPLATE_NAME -- 200 (512)
     CT_FLAG_IS_MODIFIED -- 20000 (131072)
 
-  TemplatePropSecurityDescriptor = O:S-1-5-21-3975454498-3980183307-2685672490-1105G:S-1-5-21-3975454498-3980183307-2685672490-519D:PAI(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3975454498-3980183307-2685672490-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3975454498-3980183307-2685672490-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3975454498-3980183307-2685672490-1105)(A;;LCRPLORC;;;AU)
+  TemplatePropSecurityDescriptor = O:S-1-5-21-3975454498-3980183307-2685672490-1105G:S-1-5-21-3975454498-3980183307-2685672490-519D:PAI(OA;;CR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DC)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;DA)(OA;;RPWPCR;0e10c968-78fb-11d2-90d4-00c04f79dc55;;S-1-5-21-3975454498-3980183307-2685672490-519)(A;;LCRPRC;;;DC)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;DA)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3975454498-3980183307-2685672490-519)(A;;CCDCLCSWRPWPDTLOSDRCWDWO;;;S-1-5-21-3975454498-3980183307-2685672490-1105)(A;;LCRPLORC;;;AU)
 
+    Allow Enroll        CORP\Domain Computers
     Allow Enroll        CORP\Domain Admins
     Allow Enroll        CORP\Enterprise Admins
+    Allow Read  CORP\Domain Computers
     Allow Full Control  CORP\Domain Admins
     Allow Full Control  CORP\Enterprise Admins
     Allow Full Control  CORP\pki.admin
@@ -316,9 +318,9 @@ certutil -template CVI-WebServer
   Extension[0]:
     1.3.6.1.4.1.311.21.7: Flags = 0, Length = 31
     Certificate Template Information
-        Template=1.3.6.1.4.1.311.21.8.15886664.4298044.8996776.14853544.7902291.169.8802149.7201620
+        Template=CVI-WebServer(1.3.6.1.4.1.311.21.8.15886664.4298044.8996776.14853544.7902291.169.8802149.7201620)
         Major Version Number=100
-        Minor Version Number=3
+        Minor Version Number=6
 
   Extension[1]:
     2.5.29.37: Flags = 0, Length = c
